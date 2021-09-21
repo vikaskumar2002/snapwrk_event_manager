@@ -28,31 +28,25 @@ bool leapYear(int year) {
 }
 
 
-
 int daysInMonth(final int monthNum, final int year) {
-  List<int> monthLength = [12];
-  //var index = 0;
-  //if (monthLength != null && monthLength.length > index) {
-    monthLength[0] = 31;
-    monthLength[2] = 31;
-    monthLength[4] = 31;
-    monthLength[6] = 31;
-    monthLength[7] = 31;
-    monthLength[9] = 31;
-    monthLength[11] = 31;
-    monthLength[3] = 30;
-    monthLength[8] = 30;
-    monthLength[5] = 30;
-    monthLength[10] = 30;
 
-    if (leapYear(year) == true)
-      monthLength[1] = 29;
-    else
-      monthLength[1] = 28;
-// You can safely access the element here.
-  //}
+   var count = 0;
 
+    if(monthNum == 0 || monthNum == 2 || monthNum == 4 || monthNum == 6 || monthNum == 7 || monthNum == 9 || monthNum == 11 )
+    {
+      count = 31;
+    }
+    else if(monthNum == 3 || monthNum == 8 || monthNum == 5 || monthNum == 10)
+    {
+      count = 30;
+    }
+    else{
+      if (leapYear(year) == true)
+        count = 29;
+      else
+        count = 28;
+    }
 
-  return monthLength[monthNum];
+  return count;
 }
 

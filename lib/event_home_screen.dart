@@ -123,7 +123,7 @@ class _EventHomeScreenState extends State<EventHomeScreen> {
                        title: "",
                        description: ""),
                    month: months.elementAt(months.indexOf(selectedMonth),),
-                   day: (0 + 1).toString()
+                   day: (index + 1).toString()
                );
              },
            ),
