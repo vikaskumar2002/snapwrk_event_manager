@@ -173,7 +173,7 @@ class _EventHomeScreenState extends State<EventHomeScreen> {
                               flex: 1,
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
-                                child: ListView.builder(
+                                child: ListView.separated(
                                   itemCount: item.length,
                                   itemBuilder: (context,index) => ListTile(
                                       onTap: (){
@@ -189,9 +189,9 @@ class _EventHomeScreenState extends State<EventHomeScreen> {
                                           ),
                                       ),
                                   ),
-                                 /* separatorBuilder: (context, index) {
+                                  separatorBuilder: (context, index) {
                                     return Divider();
-                                  },*/
+                                  },
                                 ),
                               ),
                           ),
